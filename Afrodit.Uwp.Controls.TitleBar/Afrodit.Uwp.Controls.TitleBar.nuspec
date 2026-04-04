@@ -9,16 +9,24 @@
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<license type="expression">MIT</license>
 		<icon>Assets\icon.png</icon>
-		<readme>Docs\readme.md</readme>
-		<description>Componente TitleBar avanzado para aplicaciones UWP. Incluye soporte para Fluent Design, NavigationView inyectado, comandos MVVM y C# Fluent API.</description>
-		<tags>UWP WinUI Fluent TitleBar Afrodit XAML</tags>
-
+		<readme>readme.md</readme>
+		<projectUrl>https://github.com/alexfalconflores/afrodit-uwp</projectUrl>
+		<repository type="git" url="https://github.com/alexfalconflores/afrodit-uwp" branch="main" />
+		<summary>Barra de título personalizable y responsiva para UWP.</summary>
+		<description>Componente TitleBar avanzado para el ecosistema Afrodit UI en aplicaciones UWP. Incluye soporte nativo para Fluent Design, NavigationView inyectado, comandos MVVM, y una API fluida para C# Markup. Reemplaza la barra de título tradicional permitiendo áreas de inyección seguras y soporte para tamaño Tall.</description>
+		<releaseNotes>Versión inicial 1.0.0. Implementación del modo Short y Tall, inyección de contenido central/lateral, protección de System Controls y Fluent API para C#.</releaseNotes>
+		<copyright>Copyright 2026 Alex Falcon Flores</copyright>
+		<tags>uwp winui fluent titlebar afrodit xaml csharp controls markup</tags>
 		<dependencies>
-			<dependency id="Microsoft.UI.Xaml" version="2.8.6" />
+			<group targetFramework="netcore50">
+				<dependency id="Microsoft.UI.Xaml" version="2.8.6" />
+			</group>
 		</dependencies>
 	</metadata>
 
 	<files>
+		<file src="..\Assets\icon.png" target="Assets\" />
+		<file src="readme.md" target="readme.md" />
 		<file src="bin\x64\Release\Afrodit.Uwp.Controls.TitleBar.dll" target="lib\netcore50" />
 		<file src="bin\x64\Release\Afrodit.Uwp.Controls.TitleBar.pri" target="lib\netcore50" />
 		<file src="bin\x64\Release\Afrodit.Uwp.Helpers.dll" target="lib\netcore50" />
