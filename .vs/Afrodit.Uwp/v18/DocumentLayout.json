@@ -1,0 +1,90 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Packages\\Afrodit.Uwp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{444184FF-7068-4176-86A4-81328990F595}|Afrodit.Uwp.Controls.TitleBar\\Afrodit.Uwp.Controls.TitleBar.csproj|d:\\packages\\afrodit.uwp\\afrodit.uwp.controls.titlebar\\titlebar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{444184FF-7068-4176-86A4-81328990F595}|Afrodit.Uwp.Controls.TitleBar\\Afrodit.Uwp.Controls.TitleBar.csproj|solutionrelative:afrodit.uwp.controls.titlebar\\titlebar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{444184FF-7068-4176-86A4-81328990F595}|Afrodit.Uwp.Controls.TitleBar\\Afrodit.Uwp.Controls.TitleBar.csproj|D:\\Packages\\Afrodit.Uwp\\afrodit.uwp.controls.titlebar\\themes\\generic.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{444184FF-7068-4176-86A4-81328990F595}|Afrodit.Uwp.Controls.TitleBar\\Afrodit.Uwp.Controls.TitleBar.csproj|solutionrelative:afrodit.uwp.controls.titlebar\\themes\\generic.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90BE92F3-BD14-4495-8D8F-670BFA11FA0B}|Afrodit.Uwp.Sandbox\\Afrodit.Uwp.Sandbox.csproj|D:\\Packages\\Afrodit.Uwp\\afrodit.uwp.sandbox\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{90BE92F3-BD14-4495-8D8F-670BFA11FA0B}|Afrodit.Uwp.Sandbox\\Afrodit.Uwp.Sandbox.csproj|solutionrelative:afrodit.uwp.sandbox\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F303E3A-3947-4B62-A67A-E11BF7FE1242}|Afrodit.Uwp.Helpers\\Afrodit.Uwp.Helpers.csproj|d:\\packages\\afrodit.uwp\\afrodit.uwp.helpers\\navigationpaneservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F303E3A-3947-4B62-A67A-E11BF7FE1242}|Afrodit.Uwp.Helpers\\Afrodit.Uwp.Helpers.csproj|solutionrelative:afrodit.uwp.helpers\\navigationpaneservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TitleBar.cs",
+              "DocumentMoniker": "D:\\Packages\\Afrodit.Uwp\\Afrodit.Uwp.Controls.TitleBar\\TitleBar.cs",
+              "RelativeDocumentMoniker": "Afrodit.Uwp.Controls.TitleBar\\TitleBar.cs",
+              "ToolTip": "D:\\Packages\\Afrodit.Uwp\\Afrodit.Uwp.Controls.TitleBar\\TitleBar.cs",
+              "RelativeToolTip": "Afrodit.Uwp.Controls.TitleBar\\TitleBar.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-04T14:38:54.618Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Generic.xaml",
+              "DocumentMoniker": "D:\\Packages\\Afrodit.Uwp\\Afrodit.Uwp.Controls.TitleBar\\Themes\\Generic.xaml",
+              "RelativeDocumentMoniker": "Afrodit.Uwp.Controls.TitleBar\\Themes\\Generic.xaml",
+              "ToolTip": "D:\\Packages\\Afrodit.Uwp\\Afrodit.Uwp.Controls.TitleBar\\Themes\\Generic.xaml",
+              "RelativeToolTip": "Afrodit.Uwp.Controls.TitleBar\\Themes\\Generic.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-04T14:38:54.981Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "D:\\Packages\\Afrodit.Uwp\\Afrodit.Uwp.Sandbox\\MainPage.xaml",
+              "RelativeDocumentMoniker": "Afrodit.Uwp.Sandbox\\MainPage.xaml",
+              "ToolTip": "D:\\Packages\\Afrodit.Uwp\\Afrodit.Uwp.Sandbox\\MainPage.xaml",
+              "RelativeToolTip": "Afrodit.Uwp.Sandbox\\MainPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-04T14:38:54.981Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NavigationPaneService.cs",
+              "DocumentMoniker": "D:\\Packages\\Afrodit.Uwp\\Afrodit.Uwp.Helpers\\NavigationPaneService.cs",
+              "RelativeDocumentMoniker": "Afrodit.Uwp.Helpers\\NavigationPaneService.cs",
+              "ToolTip": "D:\\Packages\\Afrodit.Uwp\\Afrodit.Uwp.Helpers\\NavigationPaneService.cs",
+              "RelativeToolTip": "Afrodit.Uwp.Helpers\\NavigationPaneService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-04T14:38:54.989Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+D:\Packages\Afrodit.Uwp\Afrodit.Uwp.Controls.Animations\Afrodit.Uwp.Controls.Animations.csproj;x64
+D:\Packages\Afrodit.Uwp\Afrodit.Uwp.Controls.Animations\Afrodit.Uwp.Controls.Animations.csproj;x64
+D:\Packages\Afrodit.Uwp\Afrodit.Uwp.Controls.TitleBar\Afrodit.Uwp.Controls.TitleBar.csproj;x64
+D:\Packages\Afrodit.Uwp\Afrodit.Uwp.Extensions\Afrodit.Uwp.Extensions.csproj;x64
+D:\Packages\Afrodit.Uwp\Afrodit.Uwp.Extensions\Afrodit.Uwp.Extensions.csproj;x64
+D:\Packages\Afrodit.Uwp\Afrodit.Uwp.Helpers\Afrodit.Uwp.Helpers.csproj;x64
+D:\Packages\Afrodit.Uwp\Afrodit.Uwp.Helpers\Afrodit.Uwp.Helpers.csproj;x64
+D:\Packages\Afrodit.Uwp\Afrodit.Uwp.Sandbox\Afrodit.Uwp.Sandbox.csproj;x64

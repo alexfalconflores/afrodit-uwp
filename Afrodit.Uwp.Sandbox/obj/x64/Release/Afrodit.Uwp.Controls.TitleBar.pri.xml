@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PriInfo>
+	<ResourceMap name="Afrodit.Uwp.Controls.TitleBar" version="1.0" primary="true">
+		<Qualifiers/>
+		<ResourceMapSubtree name="Files">
+			<ResourceMapSubtree name="Afrodit.Uwp.Controls.TitleBar">
+				<NamedResource name="Afrodit.Uwp.Controls.TitleBar.xr.xml" uri="ms-resource://Afrodit.Uwp.Controls.TitleBar/Files/Afrodit.Uwp.Controls.TitleBar/Afrodit.Uwp.Controls.TitleBar.xr.xml">
+					<Candidate type="Path">
+						<Value>Afrodit.Uwp.Controls.TitleBar\Afrodit.Uwp.Controls.TitleBar.xr.xml</Value>
+					</Candidate>
+				</NamedResource>
+				<ResourceMapSubtree name="Themes">
+					<NamedResource name="Generic.xbf" uri="ms-resource://Afrodit.Uwp.Controls.TitleBar/Files/Afrodit.Uwp.Controls.TitleBar/Themes/Generic.xbf">
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+			</ResourceMapSubtree>
+		</ResourceMapSubtree>
+	</ResourceMap>
+</PriInfo>

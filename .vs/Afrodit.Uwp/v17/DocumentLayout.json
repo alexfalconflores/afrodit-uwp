@@ -1,0 +1,70 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Packages\\Afrodit.Uwp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{444184FF-7068-4176-86A4-81328990F595}|Afrodit.Uwp.Controls.TitleBar\\Afrodit.Uwp.Controls.TitleBar.csproj|d:\\packages\\afrodit.uwp\\afrodit.uwp.controls.titlebar\\afrodit.uwp.controls.titlebar.nuspec||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{444184FF-7068-4176-86A4-81328990F595}|Afrodit.Uwp.Controls.TitleBar\\Afrodit.Uwp.Controls.TitleBar.csproj|solutionrelative:afrodit.uwp.controls.titlebar\\afrodit.uwp.controls.titlebar.nuspec||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90BE92F3-BD14-4495-8D8F-670BFA11FA0B}|Afrodit.Uwp.Sandbox\\Afrodit.Uwp.Sandbox.csproj|d:\\packages\\afrodit.uwp\\afrodit.uwp.sandbox\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{90BE92F3-BD14-4495-8D8F-670BFA11FA0B}|Afrodit.Uwp.Sandbox\\Afrodit.Uwp.Sandbox.csproj|solutionrelative:afrodit.uwp.sandbox\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90BE92F3-BD14-4495-8D8F-670BFA11FA0B}|Afrodit.Uwp.Sandbox\\Afrodit.Uwp.Sandbox.csproj|d:\\packages\\afrodit.uwp\\afrodit.uwp.sandbox\\mainpage.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{90BE92F3-BD14-4495-8D8F-670BFA11FA0B}|Afrodit.Uwp.Sandbox\\Afrodit.Uwp.Sandbox.csproj|solutionrelative:afrodit.uwp.sandbox\\mainpage.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "D:\\Packages\\Afrodit.Uwp\\Afrodit.Uwp.Sandbox\\MainPage.xaml",
+              "RelativeDocumentMoniker": "Afrodit.Uwp.Sandbox\\MainPage.xaml",
+              "ToolTip": "D:\\Packages\\Afrodit.Uwp\\Afrodit.Uwp.Sandbox\\MainPage.xaml",
+              "RelativeToolTip": "Afrodit.Uwp.Sandbox\\MainPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-04T20:14:51.505Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Afrodit.Uwp.Controls.TitleBar.nuspec",
+              "DocumentMoniker": "D:\\Packages\\Afrodit.Uwp\\Afrodit.Uwp.Controls.TitleBar\\Afrodit.Uwp.Controls.TitleBar.nuspec",
+              "RelativeDocumentMoniker": "Afrodit.Uwp.Controls.TitleBar\\Afrodit.Uwp.Controls.TitleBar.nuspec",
+              "ToolTip": "D:\\Packages\\Afrodit.Uwp\\Afrodit.Uwp.Controls.TitleBar\\Afrodit.Uwp.Controls.TitleBar.nuspec",
+              "RelativeToolTip": "Afrodit.Uwp.Controls.TitleBar\\Afrodit.Uwp.Controls.TitleBar.nuspec",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003150|",
+              "WhenOpened": "2026-04-04T19:40:55.83Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "D:\\Packages\\Afrodit.Uwp\\Afrodit.Uwp.Sandbox\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "Afrodit.Uwp.Sandbox\\MainPage.xaml.cs",
+              "ToolTip": "D:\\Packages\\Afrodit.Uwp\\Afrodit.Uwp.Sandbox\\MainPage.xaml.cs",
+              "RelativeToolTip": "Afrodit.Uwp.Sandbox\\MainPage.xaml.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACAAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-04T15:15:00.624Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

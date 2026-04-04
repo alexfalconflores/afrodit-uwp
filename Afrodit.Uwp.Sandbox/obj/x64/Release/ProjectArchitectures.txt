@@ -1,0 +1,1 @@
+D:\Packages\Afrodit.Uwp\Afrodit.Uwp.Sandbox\Afrodit.Uwp.Sandbox.csproj;x64
