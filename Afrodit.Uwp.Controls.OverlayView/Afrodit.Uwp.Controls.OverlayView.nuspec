@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+	<metadata>
+		<id>Afrodit.Uwp.Controls.OverlayView</id>
+		<version>1.0.0</version>
+		<title>Afrodit UI - OverlayView Control</title>
+		<authors>Alex Falcon Flores</authors>
+		<owners>Afrodit</owners>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<license type="expression">MIT</license>
+		<icon>Assets\icon.png</icon>
+		<readme>readme.md</readme>
+		<projectUrl>https://github.com/alexfalconflores/afrodit-uwp</projectUrl>
+		<repository type="git" url="https://github.com/alexfalconflores/afrodit-uwp" branch="main" />
+		<summary>Control modal inmersivo a pantalla completa para UWP.</summary>
+		<description>Componente OverlayView avanzado para el ecosistema Afrodit UI en aplicaciones UWP. Proporciona una superficie modal nativa a pantalla completa diseñada para experiencias inmersivas. Incluye soporte para inyección de dependencias visuales (Fluent API), Focus Trapping, intercepción segura del botón de retroceso del sistema (System Back) y protección geométrica para los Caption Buttons de Windows.</description>
+		<releaseNotes>Versión inicial 1.0.0. Implementación de Overlay inmersivo con prevención de reentrada, Focus Trap automático, gestión de teclado (ESC) y Fluent API para C# Markup.</releaseNotes>
+		<copyright>Copyright 2026 Alex Falcon Flores</copyright>
+		<tags>uwp winui fluent overlay modal dialog afrodit xaml csharp controls markup</tags>
+		<dependencies>
+			<group targetFramework="netcore50">
+				<dependency id="Microsoft.UI.Xaml" version="2.8.6" />
+			</group>
+		</dependencies>
+	</metadata>
+
+	<files>
+		<file src="..\Assets\icon.png" target="Assets\" />
+		<file src="readme.md" target="readme.md" />
+
+		<file src="bin\x64\Release\Afrodit.Uwp.Controls.OverlayView.dll" target="lib\netcore50" />
+		<file src="bin\x64\Release\Afrodit.Uwp.Controls.OverlayView.pri" target="lib\netcore50" />
+
+		<file src="bin\x64\Release\Afrodit.Uwp.Controls.OverlayView\*.xaml" target="lib\netcore50\Afrodit.Uwp.Controls.OverlayView" />
+		<file src="bin\x64\Release\Afrodit.Uwp.Controls.OverlayView\*.xml" target="lib\netcore50\Afrodit.Uwp.Controls.OverlayView" />
+		<file src="bin\x64\Release\Afrodit.Uwp.Controls.OverlayView\Themes\*.xaml" target="lib\netcore50\Afrodit.Uwp.Controls.OverlayView\Themes" />
+	</files>
+</package>

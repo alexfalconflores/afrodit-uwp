@@ -79,12 +79,20 @@
             </winui:NavigationView.MenuItems>
 
             <Frame>
-                <TextBlock
-                    x:Name="StatusTextBlock"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Style="{ThemeResource TitleTextBlockStyle}"
-                    Text="¡Esperando interacción...!" />
+                <StackPanel Orientation="Vertical" Spacing="12">
+                    <TextBlock
+                        x:Name="StatusTextBlock"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Style="{ThemeResource TitleTextBlockStyle}"
+                        Text="¡Esperando interacción...!" />
+                    <Button
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Click="OnOpenOverlayClicked"
+                        Content="Lanzar Overlay de Prueba"
+                        Style="{StaticResource AccentButtonStyle}" />
+                </StackPanel>
             </Frame>
         </winui:NavigationView>
     </Grid>

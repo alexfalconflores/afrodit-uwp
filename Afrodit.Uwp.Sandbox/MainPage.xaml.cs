@@ -54,5 +54,35 @@ namespace Afrodit.Uwp.Sandbox
             // además de cambiar este texto, verás que Afrodit abre el panel lateral 
             // automáticamente gracias a nuestro fallback interno en TitleBar.cs.
         }
+
+        private async void OnOpenOverlayClicked(object sender, RoutedEventArgs e)
+        {
+            // 1. Construimos el contenido interno que irá dentro del Overlay
+            var internalStack = new StackPanel { Spacing = 12 };
+            internalStack.Children.Add(new TextBlock
+            {
+                Text = "¿Estás seguro de que deseas eliminar este elemento de Nokana? Esta acción no se puede deshacer.",
+                TextWrapping = TextWrapping.Wrap
+            });
+
+            var confirmButton = new Button { Content = "Sí, eliminar", Style = (Style)Application.Current.Resources["AccentButtonStyle"] };
+            internalStack.Children.Add(confirmButton);
+
+            // 2. Construimos y configuramos el Overlay usando tu Fluent API
+            var testOverlay = new OverlayView()
+                .Title("Confirmación de Seguridad")
+                .CloseButtonToolTip("Cancelar y cerrar")
+                //.TitleBarHeight(48) // Ajusta esto si tu TitleBar está en modo Tall
+                .Content(internalStack);
+
+            // 3. Programamos el cierre manual si hace clic en el botón interno
+            confirmButton.Click += (s, args) => testOverlay.Hide();
+
+            // 4. Mostramos el Overlay y esperamos su resultado
+            var result = await testOverlay.ShowAsync();
+
+            // 5. (Opcional) Vemos en consola cómo se cerró
+            System.Diagnostics.Debug.WriteLine($"Overlay finalizado con resultado: {result}");
+        }
     }
 }

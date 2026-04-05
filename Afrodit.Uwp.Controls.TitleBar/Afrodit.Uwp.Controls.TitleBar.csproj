@@ -161,7 +161,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Afrodit.Uwp.Controls.TitleBar.nuspec" />
-    <None Include="README.md" />
+    <None Include="readme.md" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
