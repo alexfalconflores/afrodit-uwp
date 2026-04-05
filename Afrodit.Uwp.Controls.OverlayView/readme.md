@@ -74,3 +74,4 @@ Eventos
 - `Opened`: Se dispara cuando la superficie del overlay y sus animaciones de transición han comenzado a mostrarse.
 - `Closed`: Se dispara cuando el overlay se oculta. Proporciona `OverlayClosedEventArgs` detallando el `Result` y el `Reason` exacto del cierre (`CloseButton`, `EscapeKey`, `SystemBack`, `Programmatic`).
 
+Diseñado con ♥ para el ecosistema UWP moderno.
