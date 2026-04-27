@@ -1,88 +1,80 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="using:Microsoft.UI.Xaml.Controls">
 
-    <Style x:Key="AfroditGhostTextBoxStyle" TargetType="TextBox">
+    <ResourceDictionary.ThemeDictionaries>
+        <ResourceDictionary x:Key="Default">
+            <SolidColorBrush x:Key="AfroditInputBackground" Color="#0DFFFFFF" />
+            <SolidColorBrush x:Key="AfroditInputBorder" Color="Transparent" />
+            <SolidColorBrush x:Key="AfroditInputBackgroundHover" Color="#1AFFFFFF" />
+            <SolidColorBrush x:Key="AfroditInputBorderHover" Color="#33FFFFFF" />
+            <SolidColorBrush x:Key="AfroditInputBackgroundFocused" Color="#1AFFFFFF" />
+            <SolidColorBrush x:Key="AfroditInputBorderFocused" Color="{ThemeResource SystemAccentColor}" />
+            <SolidColorBrush x:Key="AfroditInputPlaceholder" Color="#80FFFFFF" />
+            <SolidColorBrush x:Key="AfroditInputText" Color="#FFFFFF" />
+        </ResourceDictionary>
+
+        <ResourceDictionary x:Key="Light">
+            <SolidColorBrush x:Key="AfroditInputBackground" Color="#08000000" />
+            <SolidColorBrush x:Key="AfroditInputBorder" Color="Transparent" />
+            <SolidColorBrush x:Key="AfroditInputBackgroundHover" Color="#0F000000" />
+            <SolidColorBrush x:Key="AfroditInputBorderHover" Color="#33000000" />
+            <SolidColorBrush x:Key="AfroditInputBackgroundFocused" Color="#FFFFFF" />
+            <SolidColorBrush x:Key="AfroditInputBorderFocused" Color="{ThemeResource SystemAccentColor}" />
+            <SolidColorBrush x:Key="AfroditInputPlaceholder" Color="#80000000" />
+            <SolidColorBrush x:Key="AfroditInputText" Color="#000000" />
+        </ResourceDictionary>
+
+        <ResourceDictionary x:Key="HighContrast">
+            <SolidColorBrush x:Key="AfroditInputBackground" Color="Transparent" />
+            <SolidColorBrush x:Key="AfroditInputBorder" Color="{ThemeResource SystemColorButtonTextColor}" />
+            <SolidColorBrush x:Key="AfroditInputBackgroundHover" Color="Transparent" />
+            <SolidColorBrush x:Key="AfroditInputBorderHover" Color="{ThemeResource SystemColorHighlightColor}" />
+            <SolidColorBrush x:Key="AfroditInputBackgroundFocused" Color="Transparent" />
+            <SolidColorBrush x:Key="AfroditInputBorderFocused" Color="{ThemeResource SystemColorHighlightColor}" />
+            <SolidColorBrush x:Key="AfroditInputPlaceholder" Color="{ThemeResource SystemColorGrayTextColor}" />
+            <SolidColorBrush x:Key="AfroditInputText" Color="{ThemeResource SystemColorButtonTextColor}" />
+        </ResourceDictionary>
+    </ResourceDictionary.ThemeDictionaries>
+
+    <Thickness x:Key="TextBoxTopHeaderMargin">0,0,0,8</Thickness>
+
+    <Style x:Key="GhostTextBoxStyle" TargetType="TextBox">
         <Setter Property="Background" Value="Transparent" />
+        <Setter Property="BorderBrush" Value="Transparent" />
+        <Setter Property="Foreground" Value="{ThemeResource AfroditInputText}" />
         <Setter Property="BorderThickness" Value="0" />
         <Setter Property="Padding" Value="0,4" />
         <Setter Property="FontSize" Value="16" />
-        <Setter Property="Foreground" Value="{ThemeResource SystemControlPageTextBaseHighBrush}" />
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="TextBox">
-                    <Grid Background="{TemplateBinding Background}">
-                        <TextBlock
-                            x:Name="PlaceholderTextContentPresenter"
-                            Margin="{TemplateBinding BorderThickness}"
-                            Padding="{TemplateBinding Padding}"
-                            Foreground="{ThemeResource SystemControlPageTextBaseMediumBrush}"
-                            IsHitTestVisible="False"
-                            Opacity="0.6"
-                            Text="{TemplateBinding PlaceholderText}" />
-
-                        <ScrollViewer
-                            x:Name="ContentElement"
-                            Margin="{TemplateBinding BorderThickness}"
-                            Padding="{TemplateBinding Padding}"
-                            IsTabStop="False"
-                            ZoomMode="Disabled" />
-                    </Grid>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-
-    <Style x:Key="AfroditTextBoxStyle" TargetType="TextBox">
-        <Setter Property="Background" Value="Transparent" />
-        <Setter Property="BorderBrush" Value="{ThemeResource SystemControlForegroundBaseMediumBrush}" />
-        <Setter Property="BorderThickness" Value="1" />
-        <Setter Property="CornerRadius" Value="6" />
-        <Setter Property="Padding" Value="12,8" />
-        <Setter Property="FontSize" Value="14" />
-        <Setter Property="Foreground" Value="{ThemeResource SystemControlPageTextBaseHighBrush}" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="TextBox">
                     <Grid>
-                        <Border
-                            x:Name="BorderElement"
-                            Background="{TemplateBinding Background}"
-                            BorderBrush="{TemplateBinding BorderBrush}"
-                            BorderThickness="{TemplateBinding BorderThickness}"
-                            CornerRadius="{TemplateBinding CornerRadius}">
-                            <Grid>
-                                <TextBlock
-                                    x:Name="PlaceholderTextContentPresenter"
-                                    Margin="{TemplateBinding BorderThickness}"
-                                    Padding="{TemplateBinding Padding}"
-                                    Foreground="{ThemeResource SystemControlPageTextBaseMediumBrush}"
-                                    IsHitTestVisible="False"
-                                    Text="{TemplateBinding PlaceholderText}" />
+                        <ScrollViewer
+                            x:Name="ContentElement"
+                            Margin="{TemplateBinding BorderThickness}"
+                            Padding="{TemplateBinding Padding}"
+                            Foreground="{TemplateBinding Foreground}"
+                            IsTabStop="False"
+                            ZoomMode="Disabled" />
+                        <TextBlock
+                            x:Name="PlaceholderTextContentPresenter"
+                            Margin="{TemplateBinding BorderThickness}"
+                            Padding="{TemplateBinding Padding}"
+                            Foreground="{ThemeResource AfroditInputPlaceholder}"
+                            IsHitTestVisible="False"
+                            Text="{TemplateBinding PlaceholderText}" />
 
-                                <ScrollViewer
-                                    x:Name="ContentElement"
-                                    Margin="{TemplateBinding BorderThickness}"
-                                    Padding="{TemplateBinding Padding}"
-                                    IsTabStop="False"
-                                    ZoomMode="Disabled" />
-                            </Grid>
-                        </Border>
                         <VisualStateManager.VisualStateGroups>
                             <VisualStateGroup x:Name="CommonStates">
                                 <VisualState x:Name="Normal" />
-                                <VisualState x:Name="PointerOver">
+                                <VisualState x:Name="PointerOver" />
+                                <VisualState x:Name="Focused" />
+                                <VisualState x:Name="Disabled">
                                     <Storyboard>
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BorderElement" Storyboard.TargetProperty="BorderBrush">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlForegroundBaseHighBrush}" />
-                                        </ObjectAnimationUsingKeyFrames>
-                                    </Storyboard>
-                                </VisualState>
-                                <VisualState x:Name="Focused">
-                                    <Storyboard>
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BorderElement" Storyboard.TargetProperty="BorderBrush">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemAccentColor}" />
-                                        </ObjectAnimationUsingKeyFrames>
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BorderElement" Storyboard.TargetProperty="BorderThickness">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="2" />
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentElement" Storyboard.TargetProperty="Opacity">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="0.4" />
                                         </ObjectAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>

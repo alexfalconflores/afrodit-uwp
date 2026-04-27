@@ -69,18 +69,16 @@ Variantes disponibles: `AccentIconButtonStyle`, `DangerIconButtonStyle`, `Succes
 
 ### Input
 ```xaml
-<TextBox Style="{StaticResource AfroditTextBoxStyle}" PlaceholderText="Escribe aquí..." />
-
-<TextBox Style="{StaticResource AfroditGhostTextBoxStyle}" PlaceholderText="Sin título" />
+<TextBox Style="{StaticResource GhostTextBoxStyle}" PlaceholderText="Sin título" />
 ```
 
 ### Typography
 ```xaml
-<TextBlock Text="Título Principal" Style="{StaticResource AfroditHeaderStyle}" />
-<TextBlock Text="Subtítulo" Style="{StaticResource AfroditTitleStyle}" />
-<TextBlock Text="Cuerpo de lectura" Style="{StaticResource AfroditBodyStyle}" />
-<TextBlock Text="Mensaje de error" Style="{StaticResource AfroditDangerTextStyle}" />
-<TextBlock Text="Metadatos o Fecha" Style="{StaticResource AfroditCaptionStyle}" />
+<TextBlock Text="Título Principal" Style="{StaticResource HeaderStyle}" />
+<TextBlock Text="Subtítulo" Style="{StaticResource TitleStyle}" />
+<TextBlock Text="Cuerpo de lectura" Style="{StaticResource BodyStyle}" />
+<TextBlock Text="Mensaje de error" Style="{StaticResource DangerTextStyle}" />
+<TextBlock Text="Metadatos o Fecha" Style="{StaticResource CaptionStyle}" />
 ```
 
 Diseñado con ♥ para el ecosistema UWP moderno.

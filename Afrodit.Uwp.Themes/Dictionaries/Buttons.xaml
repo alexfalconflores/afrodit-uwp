@@ -1,94 +1,204 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="using:Microsoft.UI.Xaml.Controls">
+
+    <ResourceDictionary.ThemeDictionaries>
+
+        <ResourceDictionary x:Key="Default">
+            <SolidColorBrush x:Key="DangerBrush" Color="#E81123" />
+            <SolidColorBrush x:Key="DangerTextBrush" Color="#FFFFFF" />
+            <SolidColorBrush x:Key="DangerHoverBrush" Color="#C50F1F" />
+            <SolidColorBrush x:Key="DangerPressedBrush" Color="#A20025" />
+            <SolidColorBrush x:Key="SuccessBrush" Color="#107C10" />
+            <SolidColorBrush x:Key="SuccessHoverBrush" Color="#128E12" />
+            <SolidColorBrush x:Key="SuccessPressedBrush" Color="#0E6A0E" />
+
+            <SolidColorBrush x:Key="SubtleHoverBrush" Color="#1AFFFFFF" />
+            <SolidColorBrush x:Key="SubtlePressedBrush" Color="#33FFFFFF" />
+            <SolidColorBrush x:Key="SubtleHoverTextBrush" Color="#FFFFFF" />
+            <SolidColorBrush x:Key="WarningBrush" Color="#FF8C00" />
+            <SolidColorBrush x:Key="WarningHoverBrush" Color="#FF9A1A" />
+            <SolidColorBrush x:Key="WarningPressedBrush" Color="#E67E00" />
+
+            <SolidColorBrush x:Key="InfoBrush" Color="#0078D4" />
+            <SolidColorBrush x:Key="InfoHoverBrush" Color="#1A86D9" />
+            <SolidColorBrush x:Key="InfoPressedBrush" Color="#006ABC" />
+            <SolidColorBrush x:Key="SoftBrush" Color="#260078D4" />
+            <SolidColorBrush x:Key="SoftTextBrush" Color="#66A3FF" />
+            <SolidColorBrush x:Key="SoftHoverBrush" Color="#330078D4" />
+            <SolidColorBrush x:Key="SoftPressedBrush" Color="#4D0078D4" />
+        </ResourceDictionary>
+
+        <ResourceDictionary x:Key="Light">
+            <SolidColorBrush x:Key="DangerBrush" Color="#D13438" />
+            <SolidColorBrush x:Key="DangerTextBrush" Color="#FFFFFF" />
+            <SolidColorBrush x:Key="DangerHoverBrush" Color="#B81D23" />
+            <SolidColorBrush x:Key="DangerPressedBrush" Color="#A20025" />
+
+            <SolidColorBrush x:Key="SuccessBrush" Color="#107C10" />
+            <SolidColorBrush x:Key="SuccessHoverBrush" Color="#0F700F" />
+            <SolidColorBrush x:Key="SuccessPressedBrush" Color="#0B5A0B" />
+            <SolidColorBrush x:Key="SubtleHoverBrush" Color="#0D000000" />
+            <SolidColorBrush x:Key="SubtlePressedBrush" Color="#1A000000" />
+            <SolidColorBrush x:Key="SubtleHoverTextBrush" Color="#000000" />
+
+            <SolidColorBrush x:Key="WarningBrush" Color="#FF8C00" />
+            <SolidColorBrush x:Key="WarningHoverBrush" Color="#E67E00" />
+            <SolidColorBrush x:Key="WarningPressedBrush" Color="#CC7000" />
+            <SolidColorBrush x:Key="InfoBrush" Color="#0078D4" />
+            <SolidColorBrush x:Key="InfoHoverBrush" Color="#006ABC" />
+            <SolidColorBrush x:Key="InfoPressedBrush" Color="#005A9E" />
+
+            <SolidColorBrush x:Key="SoftBrush" Color="#1A0078D4" />
+            <SolidColorBrush x:Key="SoftTextBrush" Color="#005A9E" />
+            <SolidColorBrush x:Key="SoftHoverBrush" Color="#260078D4" />
+            <SolidColorBrush x:Key="SoftPressedBrush" Color="#330078D4" />
+        </ResourceDictionary>
+
+        <ResourceDictionary x:Key="HighContrast">
+            <SolidColorBrush x:Key="DangerBrush" Color="{ThemeResource SystemColorButtonFaceColor}" />
+            <SolidColorBrush x:Key="DangerTextBrush" Color="{ThemeResource SystemColorButtonTextColor}" />
+            <SolidColorBrush x:Key="SuccessBrush" Color="{ThemeResource SystemColorButtonFaceColor}" />
+            <SolidColorBrush x:Key="WarningBrush" Color="{ThemeResource SystemColorButtonFaceColor}" />
+            <SolidColorBrush x:Key="InfoBrush" Color="{ThemeResource SystemColorButtonFaceColor}" />
+            <SolidColorBrush x:Key="SoftBrush" Color="Transparent" />
+            <SolidColorBrush x:Key="SoftTextBrush" Color="{ThemeResource SystemColorHighlightColor}" />
+            <SolidColorBrush x:Key="DangerHoverBrush" Color="{ThemeResource SystemColorHighlightColor}" />
+            <SolidColorBrush x:Key="DangerPressedBrush" Color="{ThemeResource SystemColorHighlightColor}" />
+            <SolidColorBrush x:Key="SuccessHoverBrush" Color="{ThemeResource SystemColorHighlightColor}" />
+            <SolidColorBrush x:Key="SuccessPressedBrush" Color="{ThemeResource SystemColorHighlightColor}" />
+            <SolidColorBrush x:Key="SubtleHoverBrush" Color="{ThemeResource SystemColorHighlightColor}" />
+            <SolidColorBrush x:Key="SubtlePressedBrush" Color="{ThemeResource SystemColorHighlightColor}" />
+            <SolidColorBrush x:Key="SubtleHoverTextBrush" Color="{ThemeResource SystemColorHighlightTextColor}" />
+            <SolidColorBrush x:Key="WarningHoverBrush" Color="{ThemeResource SystemColorHighlightColor}" />
+            <SolidColorBrush x:Key="WarningPressedBrush" Color="{ThemeResource SystemColorHighlightColor}" />
+            <SolidColorBrush x:Key="InfoHoverBrush" Color="{ThemeResource SystemColorHighlightColor}" />
+            <SolidColorBrush x:Key="InfoPressedBrush" Color="{ThemeResource SystemColorHighlightColor}" />
+        </ResourceDictionary>
+    </ResourceDictionary.ThemeDictionaries>
+
+    <x:Double x:Key="IconSizeSmall">32</x:Double>
+    <x:Double x:Key="IconSizeMedium">36</x:Double>
+    <x:Double x:Key="IconSizeLarge">48</x:Double>
+    <x:Double x:Key="IconSizeHuge">64</x:Double>
 
     <Style x:Key="DangerButtonStyle" TargetType="Button">
-        <Setter Property="Background" Value="{ThemeResource AfroditDangerBrush}" />
-        <Setter Property="Foreground" Value="{ThemeResource AfroditDangerTextBrush}" />
+        <Setter Property="Background" Value="{ThemeResource DangerBrush}" />
+        <Setter Property="Foreground" Value="{ThemeResource DangerTextBrush}" />
+        <Setter Property="BackgroundSizing" Value="InnerBorderEdge" />
+        <Setter Property="BorderThickness" Value="0" />
         <Setter Property="CornerRadius" Value="4" />
         <Setter Property="Padding" Value="16,8" />
         <Setter Property="FontWeight" Value="SemiBold" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Grid x:Name="RootGrid" Background="{TemplateBinding Background}">
-                        <Grid.Resources>
-                            <ResourceDictionary>
-                                <ResourceDictionary.ThemeDictionaries>
-                                    <ResourceDictionary x:Key="Default">
-                                        <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="{ThemeResource AfroditDangerHoverColor}" />
-                                        <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White" />
-                                        <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="{ThemeResource AfroditDangerHoverColor}" />
-                                        <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="{ThemeResource AfroditDangerPressedColor}" />
-                                        <SolidColorBrush x:Key="ButtonForegroundPressed" Color="#E6E6E6" />
-                                        <SolidColorBrush x:Key="ButtonBackgroundDisabled" Color="#33999999" />
-                                    </ResourceDictionary>
-                                    <ResourceDictionary x:Key="Light">
-                                        <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="{ThemeResource AfroditDangerHoverColor}" />
-                                        <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White" />
-                                        <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="{ThemeResource AfroditDangerHoverColor}" />
-                                        <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="{ThemeResource AfroditDangerPressedColor}" />
-                                        <SolidColorBrush x:Key="ButtonForegroundPressed" Color="#E6E6E6" />
-                                        <SolidColorBrush x:Key="ButtonBackgroundDisabled" Color="#33000000" />
-                                    </ResourceDictionary>
-                                    <ResourceDictionary x:Key="HighContrast">
-                                        <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="{ThemeResource SystemColorHighlightColor}" />
-                                        <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="{ThemeResource SystemColorHighlightTextColor}" />
-                                        <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="{ThemeResource SystemColorHighlightColor}" />
-                                        <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="{ThemeResource SystemColorHighlightColor}" />
-                                        <SolidColorBrush x:Key="ButtonForegroundPressed" Color="{ThemeResource SystemColorHighlightTextColor}" />
-                                    </ResourceDictionary>
-                                </ResourceDictionary.ThemeDictionaries>
-                            </ResourceDictionary>
-                        </Grid.Resources>
-                        <ContentPresenter
-                            x:Name="ContentPresenter"
-                            Padding="{TemplateBinding Padding}"
-                            HorizontalContentAlignment="Center"
-                            VerticalContentAlignment="Center"
-                            AutomationProperties.AccessibilityView="Raw"
-                            BorderBrush="{TemplateBinding BorderBrush}"
-                            BorderThickness="{TemplateBinding BorderThickness}"
-                            Content="{TemplateBinding Content}" />
-                    </Grid>
+                    <ContentPresenter
+                        x:Name="ContentPresenter"
+                        Padding="{TemplateBinding Padding}"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        AutomationProperties.AccessibilityView="Raw"
+                        Background="{TemplateBinding Background}"
+                        BackgroundSizing="{TemplateBinding BackgroundSizing}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="{TemplateBinding CornerRadius}"
+                        Foreground="{TemplateBinding Foreground}">
+                        <ContentPresenter.BackgroundTransition>
+                            <BrushTransition Duration="0:0:0.083" />
+                        </ContentPresenter.BackgroundTransition>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" />
+                                <VisualState x:Name="PointerOver">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="Background">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource DangerHoverBrush}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Pressed">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="Background">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource DangerPressedBrush}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Disabled">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="Background">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlBackgroundBaseLowBrush}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="Foreground">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlDisabledBaseMediumLowBrush}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </ContentPresenter>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
 
     <Style x:Key="SuccessButtonStyle" TargetType="Button">
-        <Setter Property="Background" Value="{ThemeResource AfroditSuccessBrush}" />
+        <Setter Property="Background" Value="{ThemeResource SuccessBrush}" />
         <Setter Property="Foreground" Value="White" />
+        <Setter Property="BackgroundSizing" Value="InnerBorderEdge" />
+        <Setter Property="BorderThickness" Value="0" />
         <Setter Property="CornerRadius" Value="4" />
         <Setter Property="Padding" Value="16,8" />
         <Setter Property="FontWeight" Value="SemiBold" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Grid x:Name="RootGrid" Background="{TemplateBinding Background}">
-                        <Grid.Resources>
-                            <ResourceDictionary>
-                                <ResourceDictionary.ThemeDictionaries>
-                                    <ResourceDictionary x:Key="Default">
-                                        <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="{ThemeResource AfroditSuccessHoverColor}" />
-                                        <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="{ThemeResource AfroditSuccessPressedColor}" />
-                                    </ResourceDictionary>
-                                    <ResourceDictionary x:Key="Light">
-                                        <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="{ThemeResource AfroditSuccessHoverColor}" />
-                                        <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="{ThemeResource AfroditSuccessPressedColor}" />
-                                    </ResourceDictionary>
-                                    <ResourceDictionary x:Key="HighContrast">
-                                        <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="{ThemeResource SystemColorHighlightColor}" />
-                                        <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="{ThemeResource SystemColorHighlightColor}" />
-                                    </ResourceDictionary>
-                                </ResourceDictionary.ThemeDictionaries>
-                            </ResourceDictionary>
-                        </Grid.Resources>
-                        <ContentPresenter
-                            x:Name="ContentPresenter"
-                            Padding="{TemplateBinding Padding}"
-                            HorizontalContentAlignment="Center"
-                            VerticalContentAlignment="Center"
-                            Content="{TemplateBinding Content}" />
-                    </Grid>
+                    <ContentPresenter
+                        x:Name="ContentPresenter"
+                        Padding="{TemplateBinding Padding}"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        AutomationProperties.AccessibilityView="Raw"
+                        Background="{TemplateBinding Background}"
+                        BackgroundSizing="{TemplateBinding BackgroundSizing}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="{TemplateBinding CornerRadius}"
+                        Foreground="{TemplateBinding Foreground}">
+                        <ContentPresenter.BackgroundTransition>
+                            <BrushTransition Duration="0:0:0.083" />
+                        </ContentPresenter.BackgroundTransition>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" />
+                                <VisualState x:Name="PointerOver">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="Background">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SuccessHoverBrush}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Pressed">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="Background">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SuccessPressedBrush}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Disabled">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="Background">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlBackgroundBaseLowBrush}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="Foreground">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlDisabledBaseMediumLowBrush}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </ContentPresenter>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
@@ -99,38 +209,58 @@
         <Setter Property="BorderBrush" Value="{ThemeResource SystemControlForegroundAccentBrush}" />
         <Setter Property="BorderThickness" Value="1" />
         <Setter Property="Foreground" Value="{ThemeResource SystemControlForegroundAccentBrush}" />
+        <Setter Property="BackgroundSizing" Value="InnerBorderEdge" />
         <Setter Property="CornerRadius" Value="4" />
         <Setter Property="Padding" Value="16,8" />
+        <Setter Property="FontWeight" Value="SemiBold" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Grid
-                        x:Name="RootGrid"
+                    <ContentPresenter
+                        x:Name="ContentPresenter"
+                        Padding="{TemplateBinding Padding}"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        AutomationProperties.AccessibilityView="Raw"
                         Background="{TemplateBinding Background}"
+                        BackgroundSizing="{TemplateBinding BackgroundSizing}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}"
-                        CornerRadius="{TemplateBinding CornerRadius}">
-                        <Grid.Resources>
-                            <ResourceDictionary>
-                                <ResourceDictionary.ThemeDictionaries>
-                                    <ResourceDictionary x:Key="Default">
-                                        <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="{ThemeResource AfroditSubtleHoverColor}" />
-                                        <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="{ThemeResource AfroditSubtlePressedColor}" />
-                                    </ResourceDictionary>
-                                    <ResourceDictionary x:Key="Light">
-                                        <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="{ThemeResource AfroditSubtleHoverColor}" />
-                                        <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="{ThemeResource AfroditSubtlePressedColor}" />
-                                    </ResourceDictionary>
-                                </ResourceDictionary.ThemeDictionaries>
-                            </ResourceDictionary>
-                        </Grid.Resources>
-                        <ContentPresenter
-                            x:Name="ContentPresenter"
-                            Padding="{TemplateBinding Padding}"
-                            HorizontalContentAlignment="Center"
-                            VerticalContentAlignment="Center"
-                            Content="{TemplateBinding Content}" />
-                    </Grid>
+                        CornerRadius="{TemplateBinding CornerRadius}"
+                        Foreground="{TemplateBinding Foreground}">
+                        <ContentPresenter.BackgroundTransition>
+                            <BrushTransition Duration="0:0:0.083" />
+                        </ContentPresenter.BackgroundTransition>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" />
+                                <VisualState x:Name="PointerOver">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="Background">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SubtleHoverBrush}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Pressed">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="Background">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SubtlePressedBrush}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Disabled">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="Foreground">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlDisabledBaseMediumLowBrush}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="BorderBrush">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlDisabledTransparentBrush}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </ContentPresenter>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
@@ -138,117 +268,241 @@
 
     <Style x:Key="SubtleButtonStyle" TargetType="Button">
         <Setter Property="Background" Value="Transparent" />
-        <Setter Property="BorderBrush" Value="Transparent" />
         <Setter Property="BorderThickness" Value="0" />
         <Setter Property="Foreground" Value="{ThemeResource SystemControlForegroundBaseHighBrush}" />
+        <Setter Property="BackgroundSizing" Value="InnerBorderEdge" />
         <Setter Property="CornerRadius" Value="4" />
         <Setter Property="Padding" Value="12,6" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Grid
-                        x:Name="RootGrid"
+                    <ContentPresenter
+                        x:Name="ContentPresenter"
+                        Padding="{TemplateBinding Padding}"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        AutomationProperties.AccessibilityView="Raw"
                         Background="{TemplateBinding Background}"
-                        CornerRadius="{TemplateBinding CornerRadius}">
-                        <Grid.Resources>
-                            <ResourceDictionary>
-                                <ResourceDictionary.ThemeDictionaries>
-                                    <ResourceDictionary x:Key="Default">
-                                        <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="{ThemeResource AfroditSubtleHoverColor}" />
-                                        <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="{ThemeResource AfroditSubtleHoverTextColor}" />
-                                        <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="{ThemeResource AfroditSubtlePressedColor}" />
-                                    </ResourceDictionary>
-                                    <ResourceDictionary x:Key="Light">
-                                        <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="{ThemeResource AfroditSubtleHoverColor}" />
-                                        <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="{ThemeResource AfroditSubtleHoverTextColor}" />
-                                        <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="{ThemeResource AfroditSubtlePressedColor}" />
-                                    </ResourceDictionary>
-                                    <ResourceDictionary x:Key="HighContrast">
-                                        <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="{ThemeResource SystemColorHighlightColor}" />
-                                        <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="{ThemeResource SystemColorHighlightTextColor}" />
-                                    </ResourceDictionary>
-                                </ResourceDictionary.ThemeDictionaries>
-                            </ResourceDictionary>
-                        </Grid.Resources>
-                        <ContentPresenter
-                            x:Name="ContentPresenter"
-                            Padding="{TemplateBinding Padding}"
-                            HorizontalContentAlignment="Center"
-                            VerticalContentAlignment="Center"
-                            Content="{TemplateBinding Content}" />
-                    </Grid>
+                        BackgroundSizing="{TemplateBinding BackgroundSizing}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="{TemplateBinding CornerRadius}"
+                        Foreground="{TemplateBinding Foreground}">
+                        <ContentPresenter.BackgroundTransition>
+                            <BrushTransition Duration="0:0:0.083" />
+                        </ContentPresenter.BackgroundTransition>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" />
+                                <VisualState x:Name="PointerOver">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="Background">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SubtleHoverBrush}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="Foreground">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SubtleHoverTextBrush}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Pressed">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="Background">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SubtlePressedBrush}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Disabled">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="Foreground">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlDisabledBaseMediumLowBrush}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </ContentPresenter>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
 
     <Style x:Key="WarningButtonStyle" TargetType="Button">
-        <Setter Property="Background" Value="{ThemeResource AfroditWarningBrush}" />
+        <Setter Property="Background" Value="{ThemeResource WarningBrush}" />
         <Setter Property="Foreground" Value="White" />
+        <Setter Property="BackgroundSizing" Value="InnerBorderEdge" />
+        <Setter Property="BorderThickness" Value="0" />
         <Setter Property="CornerRadius" Value="4" />
         <Setter Property="Padding" Value="16,8" />
         <Setter Property="FontWeight" Value="SemiBold" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Grid x:Name="RootGrid" Background="{TemplateBinding Background}">
-                        <Grid.Resources>
-                            <ResourceDictionary>
-                                <ResourceDictionary.ThemeDictionaries>
-                                    <ResourceDictionary x:Key="Default">
-                                        <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="{ThemeResource AfroditWarningHoverColor}" />
-                                        <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="{ThemeResource AfroditWarningPressedColor}" />
-                                    </ResourceDictionary>
-                                    <ResourceDictionary x:Key="Light">
-                                        <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="{ThemeResource AfroditWarningHoverColor}" />
-                                        <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="{ThemeResource AfroditWarningPressedColor}" />
-                                    </ResourceDictionary>
-                                </ResourceDictionary.ThemeDictionaries>
-                            </ResourceDictionary>
-                        </Grid.Resources>
-                        <ContentPresenter
-                            x:Name="ContentPresenter"
-                            Padding="{TemplateBinding Padding}"
-                            HorizontalContentAlignment="Center"
-                            VerticalContentAlignment="Center"
-                            Content="{TemplateBinding Content}" />
-                    </Grid>
+                    <ContentPresenter
+                        x:Name="ContentPresenter"
+                        Padding="{TemplateBinding Padding}"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        AutomationProperties.AccessibilityView="Raw"
+                        Background="{TemplateBinding Background}"
+                        BackgroundSizing="{TemplateBinding BackgroundSizing}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="{TemplateBinding CornerRadius}"
+                        Foreground="{TemplateBinding Foreground}">
+                        <ContentPresenter.BackgroundTransition>
+                            <BrushTransition Duration="0:0:0.083" />
+                        </ContentPresenter.BackgroundTransition>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" />
+                                <VisualState x:Name="PointerOver">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="Background">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource WarningHoverBrush}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Pressed">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="Background">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource WarningPressedBrush}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Disabled">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="Background">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlBackgroundBaseLowBrush}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="Foreground">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlDisabledBaseMediumLowBrush}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </ContentPresenter>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
 
     <Style x:Key="InfoButtonStyle" TargetType="Button">
-        <Setter Property="Background" Value="{ThemeResource AfroditInfoBrush}" />
+        <Setter Property="Background" Value="{ThemeResource InfoBrush}" />
         <Setter Property="Foreground" Value="White" />
+        <Setter Property="BackgroundSizing" Value="InnerBorderEdge" />
+        <Setter Property="BorderThickness" Value="0" />
         <Setter Property="CornerRadius" Value="4" />
         <Setter Property="Padding" Value="16,8" />
         <Setter Property="FontWeight" Value="SemiBold" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Grid x:Name="RootGrid" Background="{TemplateBinding Background}">
-                        <Grid.Resources>
-                            <ResourceDictionary>
-                                <ResourceDictionary.ThemeDictionaries>
-                                    <ResourceDictionary x:Key="Default">
-                                        <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="{ThemeResource AfroditInfoHoverColor}" />
-                                        <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="{ThemeResource AfroditInfoPressedColor}" />
-                                    </ResourceDictionary>
-                                    <ResourceDictionary x:Key="Light">
-                                        <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="{ThemeResource AfroditInfoHoverColor}" />
-                                        <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="{ThemeResource AfroditInfoPressedColor}" />
-                                    </ResourceDictionary>
-                                </ResourceDictionary.ThemeDictionaries>
-                            </ResourceDictionary>
-                        </Grid.Resources>
-                        <ContentPresenter
-                            x:Name="ContentPresenter"
-                            Padding="{TemplateBinding Padding}"
-                            HorizontalContentAlignment="Center"
-                            VerticalContentAlignment="Center"
-                            Content="{TemplateBinding Content}" />
-                    </Grid>
+                    <ContentPresenter
+                        x:Name="ContentPresenter"
+                        Padding="{TemplateBinding Padding}"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        AutomationProperties.AccessibilityView="Raw"
+                        Background="{TemplateBinding Background}"
+                        BackgroundSizing="{TemplateBinding BackgroundSizing}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="{TemplateBinding CornerRadius}"
+                        Foreground="{TemplateBinding Foreground}">
+                        <ContentPresenter.BackgroundTransition>
+                            <BrushTransition Duration="0:0:0.083" />
+                        </ContentPresenter.BackgroundTransition>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" />
+                                <VisualState x:Name="PointerOver">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="Background">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource InfoHoverBrush}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Pressed">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="Background">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource InfoPressedBrush}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Disabled">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="Background">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlBackgroundBaseLowBrush}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="Foreground">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlDisabledBaseMediumLowBrush}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </ContentPresenter>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="SoftButtonStyle" TargetType="Button">
+        <Setter Property="Background" Value="{ThemeResource SoftBrush}" />
+        <Setter Property="Foreground" Value="{ThemeResource SoftTextBrush}" />
+        <Setter Property="BackgroundSizing" Value="InnerBorderEdge" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="CornerRadius" Value="6" />
+        <Setter Property="Padding" Value="16,8" />
+        <Setter Property="FontWeight" Value="SemiBold" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <ContentPresenter
+                        x:Name="ContentPresenter"
+                        Padding="{TemplateBinding Padding}"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        AutomationProperties.AccessibilityView="Raw"
+                        Background="{TemplateBinding Background}"
+                        BackgroundSizing="{TemplateBinding BackgroundSizing}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="{TemplateBinding CornerRadius}"
+                        Foreground="{TemplateBinding Foreground}">
+                        <ContentPresenter.BackgroundTransition>
+                            <BrushTransition Duration="0:0:0.083" />
+                        </ContentPresenter.BackgroundTransition>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" />
+                                <VisualState x:Name="PointerOver">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="Background">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SoftHoverBrush}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="Foreground">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemColorButtonTextColor}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Pressed">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="Background">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SoftPressedBrush}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Disabled">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="Background">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Transparent" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="Foreground">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlDisabledBaseMediumLowBrush}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </ContentPresenter>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
@@ -257,31 +511,54 @@
     <Style x:Key="FabButtonStyle" TargetType="Button">
         <Setter Property="Background" Value="{ThemeResource SystemControlBackgroundAccentBrush}" />
         <Setter Property="Foreground" Value="{ThemeResource SystemControlForegroundOnAccentBrush}" />
-        <Setter Property="Width" Value="{StaticResource AfroditIconSizeLarge}" />
-        <Setter Property="Height" Value="{StaticResource AfroditIconSizeLarge}" />
+        <Setter Property="BackgroundSizing" Value="InnerBorderEdge" />
+        <Setter Property="Width" Value="{StaticResource IconSizeLarge}" />
+        <Setter Property="Height" Value="{StaticResource IconSizeLarge}" />
         <Setter Property="Padding" Value="0" />
         <Setter Property="CornerRadius" Value="99" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Grid
-                        x:Name="RootGrid"
+                    <ContentPresenter
+                        x:Name="ContentPresenter"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        AutomationProperties.AccessibilityView="Raw"
                         Background="{TemplateBinding Background}"
-                        CornerRadius="{TemplateBinding CornerRadius}">
-                        <ContentPresenter
-                            x:Name="ContentPresenter"
-                            HorizontalContentAlignment="Center"
-                            VerticalContentAlignment="Center"
-                            Content="{TemplateBinding Content}" />
-                    </Grid>
+                        BackgroundSizing="{TemplateBinding BackgroundSizing}"
+                        CornerRadius="{TemplateBinding CornerRadius}"
+                        Foreground="{TemplateBinding Foreground}">
+                        <ContentPresenter.BackgroundTransition>
+                            <BrushTransition Duration="0:0:0.083" />
+                        </ContentPresenter.BackgroundTransition>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" />
+                                <VisualState x:Name="PointerOver">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="Background">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlHighlightAccentBrush}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Pressed">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="Background">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlHighlightAltAccentBrush}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </ContentPresenter>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
 
     <Style x:Key="IconButtonStyle" TargetType="Button">
-        <Setter Property="Width" Value="{StaticResource AfroditIconSizeMedium}" />
-        <Setter Property="Height" Value="{StaticResource AfroditIconSizeMedium}" />
+        <Setter Property="Width" Value="{StaticResource IconSizeMedium}" />
+        <Setter Property="Height" Value="{StaticResource IconSizeMedium}" />
         <Setter Property="Padding" Value="0" />
         <Setter Property="CornerRadius" Value="4" />
     </Style>
@@ -290,8 +567,8 @@
         x:Key="AccentIconButtonStyle"
         BasedOn="{StaticResource AccentButtonStyle}"
         TargetType="Button">
-        <Setter Property="Width" Value="{StaticResource AfroditIconSizeMedium}" />
-        <Setter Property="Height" Value="{StaticResource AfroditIconSizeMedium}" />
+        <Setter Property="Width" Value="{StaticResource IconSizeMedium}" />
+        <Setter Property="Height" Value="{StaticResource IconSizeMedium}" />
         <Setter Property="Padding" Value="0" />
         <Setter Property="CornerRadius" Value="4" />
     </Style>
@@ -300,8 +577,8 @@
         x:Key="SubtleIconButtonStyle"
         BasedOn="{StaticResource SubtleButtonStyle}"
         TargetType="Button">
-        <Setter Property="Width" Value="{StaticResource AfroditIconSizeMedium}" />
-        <Setter Property="Height" Value="{StaticResource AfroditIconSizeMedium}" />
+        <Setter Property="Width" Value="{StaticResource IconSizeMedium}" />
+        <Setter Property="Height" Value="{StaticResource IconSizeMedium}" />
         <Setter Property="Padding" Value="0" />
     </Style>
 
@@ -309,8 +586,8 @@
         x:Key="DangerIconButtonStyle"
         BasedOn="{StaticResource DangerButtonStyle}"
         TargetType="Button">
-        <Setter Property="Width" Value="{StaticResource AfroditIconSizeMedium}" />
-        <Setter Property="Height" Value="{StaticResource AfroditIconSizeMedium}" />
+        <Setter Property="Width" Value="{StaticResource IconSizeMedium}" />
+        <Setter Property="Height" Value="{StaticResource IconSizeMedium}" />
         <Setter Property="Padding" Value="0" />
     </Style>
 
@@ -318,8 +595,8 @@
         x:Key="SuccessIconButtonStyle"
         BasedOn="{StaticResource SuccessButtonStyle}"
         TargetType="Button">
-        <Setter Property="Width" Value="{StaticResource AfroditIconSizeMedium}" />
-        <Setter Property="Height" Value="{StaticResource AfroditIconSizeMedium}" />
+        <Setter Property="Width" Value="{StaticResource IconSizeMedium}" />
+        <Setter Property="Height" Value="{StaticResource IconSizeMedium}" />
         <Setter Property="Padding" Value="0" />
     </Style>
 
@@ -327,8 +604,17 @@
         x:Key="WarningIconButtonStyle"
         BasedOn="{StaticResource WarningButtonStyle}"
         TargetType="Button">
-        <Setter Property="Width" Value="{StaticResource AfroditIconSizeMedium}" />
-        <Setter Property="Height" Value="{StaticResource AfroditIconSizeMedium}" />
+        <Setter Property="Width" Value="{StaticResource IconSizeMedium}" />
+        <Setter Property="Height" Value="{StaticResource IconSizeMedium}" />
+        <Setter Property="Padding" Value="0" />
+    </Style>
+
+    <Style
+        x:Key="InfoIconButtonStyle"
+        BasedOn="{StaticResource InfoButtonStyle}"
+        TargetType="Button">
+        <Setter Property="Width" Value="{StaticResource IconSizeMedium}" />
+        <Setter Property="Height" Value="{StaticResource IconSizeMedium}" />
         <Setter Property="Padding" Value="0" />
     </Style>
 
@@ -336,9 +622,8 @@
         x:Key="SoftIconButtonStyle"
         BasedOn="{StaticResource SoftButtonStyle}"
         TargetType="Button">
-        <Setter Property="Width" Value="{StaticResource AfroditIconSizeMedium}" />
-        <Setter Property="Height" Value="{StaticResource AfroditIconSizeMedium}" />
+        <Setter Property="Width" Value="{StaticResource IconSizeMedium}" />
+        <Setter Property="Height" Value="{StaticResource IconSizeMedium}" />
         <Setter Property="Padding" Value="0" />
     </Style>
-
 </ResourceDictionary>
