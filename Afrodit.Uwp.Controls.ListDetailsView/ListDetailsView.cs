@@ -1,6 +1,7 @@
 ﻿using System;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Media;
 
 namespace Afrodit.WinUI.Controls;
 
@@ -90,6 +91,24 @@ public sealed class ListDetailsView : Control
     {
         get => (double)GetValue(ListPaneWidthProperty);
         set => SetValue(ListPaneWidthProperty, value);
+    }
+
+    public static readonly DependencyProperty DetailsPaneBackgroundProperty =
+    DependencyProperty.Register(nameof(DetailsPaneBackground), typeof(Brush), typeof(ListDetailsView), new PropertyMetadata(null));
+
+    public Brush DetailsPaneBackground
+    {
+        get => (Brush)GetValue(DetailsPaneBackgroundProperty);
+        set => SetValue(DetailsPaneBackgroundProperty, value);
+    }
+
+    public static readonly DependencyProperty DetailsPaneBorderBrushProperty =
+        DependencyProperty.Register(nameof(DetailsPaneBorderBrush), typeof(Brush), typeof(ListDetailsView), new PropertyMetadata(null));
+
+    public Brush DetailsPaneBorderBrush
+    {
+        get => (Brush)GetValue(DetailsPaneBorderBrushProperty);
+        set => SetValue(DetailsPaneBorderBrushProperty, value);
     }
 
     public static readonly DependencyProperty InlineBackButtonVisibilityProperty =

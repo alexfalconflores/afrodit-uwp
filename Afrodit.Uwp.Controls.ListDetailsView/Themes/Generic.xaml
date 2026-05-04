@@ -6,6 +6,9 @@
     <Style TargetType="local:ListDetailsView">
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="ListPaneWidth" Value="320" />
+        <Setter Property="DetailsPaneBackground" Value="{ThemeResource CardBackgroundFillColorDefaultBrush}" />
+        <Setter Property="DetailsPaneBorderBrush" Value="{ThemeResource CardStrokeColorDefaultBrush}" />
+
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="local:ListDetailsView">
@@ -15,11 +18,7 @@
                             <ColumnDefinition x:Name="DetailsColumn" Width="*" />
                         </Grid.ColumnDefinitions>
 
-                        <Grid
-                            x:Name="ListContainer"
-                            Grid.Column="0"
-                            BorderBrush="{ThemeResource SystemControlForegroundBaseLowBrush}"
-                            BorderThickness="0,0,1,0">
+                        <Grid x:Name="ListContainer" Grid.Column="0">
                             <ListView
                                 x:Name="ElementListView"
                                 Padding="0,0,0,24"
@@ -30,14 +29,11 @@
                                 SelectionMode="Single" />
                         </Grid>
 
-                        <Grid
-                            x:Name="DetailsContainer"
-                            Grid.Column="1"
-                            Padding="12">
+                        <Grid x:Name="DetailsContainer" Grid.Column="1">
 
                             <Border
-                                Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
-                                BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}"
+                                Background="{TemplateBinding DetailsPaneBackground}"
+                                BorderBrush="{TemplateBinding DetailsPaneBorderBrush}"
                                 BorderThickness="1"
                                 CornerRadius="8">
 
