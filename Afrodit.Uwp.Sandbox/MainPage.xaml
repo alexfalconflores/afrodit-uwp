@@ -23,10 +23,6 @@
             AppIconSource="/Assets/Square150x150Logo.scale-200.png"
             AppName="Afrodit Sandbox"
             BackRequested="AppTitleBar_BackRequested"
-            IsAppIconVisible="Visible"
-            IsBackButtonVisible="True"
-            IsPaneToggleButtonVisible="True"
-            IsSubtitleVisible="True"
             PaneToggleRequested="AppTitleBar_PaneToggleRequested"
             Size="Tall"
             Subtitle="Preview">
@@ -67,7 +63,49 @@
 
         </afrodit:TitleBar>
 
-        <winui:NavigationView
+        <afrodit:ListDetailsView
+            Grid.Row="1"
+            InlineBackButtonVisibility="Visible"
+            ItemsSource="{x:Bind Notes, Mode=OneWay}"
+            NoSelectionContent="Selecciona una nota para empezar a escribir ✍️">
+
+            <afrodit:ListDetailsView.ItemTemplate>
+                <DataTemplate x:DataType="local:Note">
+                    <StackPanel Padding="16,12" Spacing="4">
+                        <TextBlock Text="{x:Bind Title}" TextTrimming="CharacterEllipsis" />
+                        <TextBlock Text="{x:Bind Date}" />
+                    </StackPanel>
+                </DataTemplate>
+            </afrodit:ListDetailsView.ItemTemplate>
+
+            <afrodit:ListDetailsView.DetailsTemplate>
+                <DataTemplate x:DataType="local:Note">
+                    <Grid Padding="32,24">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+
+                        <TextBox
+                            Grid.Row="0"
+                            FontSize="40"
+                            FontWeight="Bold"
+                            PlaceholderText="Título de la nota"
+                            Text="{x:Bind Title, Mode=TwoWay}" />
+
+                        <TextBox
+                            Grid.Row="1"
+                            Margin="0,16,0,0"
+                            AcceptsReturn="True"
+                            PlaceholderText="Escribe lo que estás pensando..."
+                            Text="{x:Bind Content, Mode=TwoWay}"
+                            TextWrapping="Wrap" />
+                    </Grid>
+                </DataTemplate>
+            </afrodit:ListDetailsView.DetailsTemplate>
+        </afrodit:ListDetailsView>
+
+        <!--<winui:NavigationView
             x:Name="SandboxNavView"
             Grid.Row="1"
             Margin="0,0,0,0"
@@ -94,6 +132,6 @@
                         Style="{StaticResource AccentButtonStyle}" />
                 </StackPanel>
             </Frame>
-        </winui:NavigationView>
+        </winui:NavigationView>-->
     </Grid>
 </Page>

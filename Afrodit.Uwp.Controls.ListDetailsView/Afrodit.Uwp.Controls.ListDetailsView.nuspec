@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+    <metadata>
+        <id>Afrodit.Uwp.Controls.ListDetailsView</id>
+        <version>1.0.0</version>
+        <title>Afrodit UI - ListDetailsView Control</title>
+        <authors>Alex Falcon Flores</authors>
+        <owners>Afrodit</owners>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <license type="expression">MIT</license>
+        <icon>Assets\icon.png</icon>
+        <readme>readme.md</readme>
+        <projectUrl>https://github.com/alexfalconflores/afrodit-uwp</projectUrl>
+        <repository type="git" url="https://github.com/alexfalconflores/afrodit-uwp" branch="main" />
+        <summary></summary>
+        <description></description>
+        <releaseNotes>Versión inicial 1.0.0. </releaseNotes>
+        <copyright>Copyright 2026 Alex Falcon Flores</copyright>
+        <tags>uwp winui fluent titlebar afrodit xaml csharp controls markup</tags>
+        <dependencies>
+            <group targetFramework="netcore50">
+                <dependency id="Microsoft.UI.Xaml" version="2.8.6" />
+            </group>
+        </dependencies>
+    </metadata>
+
+    <files>
+        <file src="..\Assets\icon.png" target="Assets\" />
+        <file src="readme.md" target="readme.md" />
+<!--        <file src="bin\x64\Release\Afrodit.Uwp.Controls.TitleBar.dll" target="lib\netcore50" />-->
+<!--        <file src="bin\x64\Release\Afrodit.Uwp.Controls.TitleBar.pri" target="lib\netcore50" />-->
+<!--        <file src="bin\x64\Release\Afrodit.Uwp.Helpers.dll" target="lib\netcore50" />-->
+<!--        <file src="bin\x64\Release\Afrodit.Uwp.Helpers.pri" target="lib\netcore50" />-->
+<!--        <file src="bin\x64\Release\Afrodit.Uwp.Extensions.dll" target="lib\netcore50" />-->
+<!--        <file src="bin\x64\Release\Afrodit.Uwp.Extensions.pri" target="lib\netcore50" />-->
+
+<!--        <file src="bin\x64\Release\Afrodit.Uwp.Controls.TitleBar\*.xaml" target="lib\netcore50\Afrodit.Uwp.Controls.TitleBar" />-->
+<!--        <file src="bin\x64\Release\Afrodit.Uwp.Controls.TitleBar\*.xml" target="lib\netcore50\Afrodit.Uwp.Controls.TitleBar" />-->
+<!--        <file src="bin\x64\Release\Afrodit.Uwp.Controls.TitleBar\Themes\*.xaml" target="lib\netcore50\Afrodit.Uwp.Controls.TitleBar\Themes" />-->
+    </files>
+</package>

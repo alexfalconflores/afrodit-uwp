@@ -1,0 +1,139 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Afrodit.WinUI.Controls">
+
+    <Style TargetType="local:ListDetailsView">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="ListPaneWidth" Value="320" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:ListDetailsView">
+                    <Grid Background="{TemplateBinding Background}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition x:Name="ListColumn" Width="320" />
+                            <ColumnDefinition x:Name="DetailsColumn" Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Grid
+                            x:Name="ListContainer"
+                            Grid.Column="0"
+                            BorderBrush="{ThemeResource SystemControlForegroundBaseLowBrush}"
+                            BorderThickness="0,0,1,0">
+                            <ListView
+                                x:Name="ElementListView"
+                                Padding="0,0,0,24"
+                                Background="Transparent"
+                                ItemTemplate="{TemplateBinding ItemTemplate}"
+                                ItemsSource="{TemplateBinding ItemsSource}"
+                                SelectedItem="{Binding SelectedItem, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}"
+                                SelectionMode="Single" />
+                        </Grid>
+
+                        <Grid
+                            x:Name="DetailsContainer"
+                            Grid.Column="1"
+                            Padding="12">
+
+                            <Border
+                                Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
+                                BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}"
+                                BorderThickness="1"
+                                CornerRadius="8">
+
+                                <Grid>
+                                    <ContentControl
+                                        x:Name="NoSelectionPresenter"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        Content="{TemplateBinding NoSelectionContent}"
+                                        Foreground="{ThemeResource SystemControlPageTextBaseMediumBrush}" />
+
+                                    <Grid x:Name="SelectionDetailsPanel" Background="Transparent">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+
+                                        <Button
+                                            x:Name="InlineBackButton"
+                                            Grid.Row="0"
+                                            Margin="16,16,0,0"
+                                            Padding="8"
+                                            HorizontalAlignment="Left"
+                                            Background="Transparent"
+                                            BorderThickness="0"
+                                            Visibility="{TemplateBinding InlineBackButtonVisibility}">
+                                            <FontIcon FontSize="16" Glyph="&#xE72B;" />
+                                        </Button>
+
+                                        <ContentControl
+                                            Grid.Row="1"
+                                            HorizontalContentAlignment="Stretch"
+                                            VerticalContentAlignment="Stretch"
+                                            Content="{TemplateBinding SelectedItem}"
+                                            ContentTemplate="{TemplateBinding DetailsTemplate}">
+                                            <ContentControl.ContentTransitions>
+                                                <TransitionCollection>
+                                                    <EntranceThemeTransition FromVerticalOffset="20" IsStaggeringEnabled="False" />
+                                                </TransitionCollection>
+                                            </ContentControl.ContentTransitions>
+                                        </ContentControl>
+                                    </Grid>
+                                </Grid>
+                            </Border>
+                        </Grid>
+
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="LayoutStates">
+
+                                <VisualState x:Name="Wide">
+                                    <VisualState.Setters>
+                                        <Setter Target="ListColumn.Width" Value="{Binding ListPaneWidth, RelativeSource={RelativeSource TemplatedParent}}" />
+                                        <Setter Target="DetailsColumn.Width" Value="*" />
+                                        <Setter Target="ListContainer.Visibility" Value="Visible" />
+                                        <Setter Target="DetailsContainer.Visibility" Value="Visible" />
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                                <VisualState x:Name="NarrowList">
+                                    <VisualState.Setters>
+                                        <Setter Target="ListColumn.Width" Value="*" />
+                                        <Setter Target="DetailsColumn.Width" Value="0" />
+                                        <Setter Target="ListContainer.Visibility" Value="Visible" />
+                                        <Setter Target="DetailsContainer.Visibility" Value="Collapsed" />
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                                <VisualState x:Name="NarrowDetails">
+                                    <VisualState.Setters>
+                                        <Setter Target="ListColumn.Width" Value="0" />
+                                        <Setter Target="DetailsColumn.Width" Value="*" />
+                                        <Setter Target="ListContainer.Visibility" Value="Collapsed" />
+                                        <Setter Target="DetailsContainer.Visibility" Value="Visible" />
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                            </VisualStateGroup>
+
+                            <VisualStateGroup x:Name="SelectionStates">
+                                <VisualState x:Name="NoSelection">
+                                    <VisualState.Setters>
+                                        <Setter Target="SelectionDetailsPanel.Visibility" Value="Collapsed" />
+                                        <Setter Target="NoSelectionPresenter.Visibility" Value="Visible" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                                <VisualState x:Name="HasSelection">
+                                    <VisualState.Setters>
+                                        <Setter Target="SelectionDetailsPanel.Visibility" Value="Visible" />
+                                        <Setter Target="NoSelectionPresenter.Visibility" Value="Collapsed" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

@@ -2,6 +2,7 @@
 using Afrodit.WinUI.Helpers;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -25,6 +26,8 @@ namespace Afrodit.Uwp.Sandbox
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        public ObservableCollection<Note> Notes { get; set; }
+        
         public MainPage()
         {
             this.InitializeComponent();
@@ -33,13 +36,20 @@ namespace Afrodit.Uwp.Sandbox
             var view = ApplicationView.GetForCurrentView();
             view.Title = "Sandbox"; // Windows mostrará: "NombreDeApp - Sandbox"
 
-            NavigationPaneService.NavigationView = SandboxNavView;
+            //NavigationPaneService.NavigationView = SandboxNavView;
+            
+            Notes = new ObservableCollection<Note>
+            {
+                new Note { Title = "Ideas para Delta", Content = "1. Mejorar barra de navegación...\n2. Agregar iconos nuevos.", Date = "Hoy" },
+                new Note { Title = "Reunión de Diseño", Content = "Discutir la paleta de colores de Irisa y el uso del ListDetailsView.", Date = "Ayer" },
+                new Note { Title = "Lista de compras", Content = "- Café\n- Teclado mecánico nuevo", Date = "12/05/2026" }
+            };
         }
 
         // Evento del Botón Atrás
         private void AppTitleBar_BackRequested(TitleBar sender, EventArgs args)
         {
-            StatusTextBlock.Text = "🔙 Disparaste el evento: Ir Atrás";
+            // StatusTextBlock.Text = "🔙 Disparaste el evento: Ir Atrás";
 
             // Opcional: Aquí iría tu lógica real:
             // if (MyFrame.CanGoBack) MyFrame.GoBack();
@@ -48,7 +58,7 @@ namespace Afrodit.Uwp.Sandbox
         // Evento del Botón de Menú
         private void AppTitleBar_PaneToggleRequested(TitleBar sender, EventArgs args)
         {
-            StatusTextBlock.Text = "🍔 Disparaste el evento: Menú Hamburguesa";
+            // StatusTextBlock.Text = "🍔 Disparaste el evento: Menú Hamburguesa";
 
             // Nota: Como no hemos bloqueado la ejecución con un Command falso, 
             // además de cambiar este texto, verás que Afrodit abre el panel lateral 
@@ -84,5 +94,12 @@ namespace Afrodit.Uwp.Sandbox
             // 5. (Opcional) Vemos en consola cómo se cerró
             System.Diagnostics.Debug.WriteLine($"Overlay finalizado con resultado: {result}");
         }
+    }
+    
+    public class Note
+    {
+        public string Title { get; set; }
+        public string Content { get; set; }
+        public string Date { get; set; }
     }
 }
